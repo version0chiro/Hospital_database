@@ -1,0 +1,84 @@
+body {
+	background: lightpink	;
+  
+	width: 800px;
+	margin: 30px auto 0 auto;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 90%;
+	color: dimgray;
+}
+
+.header {
+	background: palevioletred;
+	height: 40px;
+	color: #BFBFBF;
+	border-bottom: 1px solid mediumvioletred;
+}
+
+.kader {
+	background: #FFFFFF;
+	border: 1px solid mediumvioletred;
+	margin-bottom: 50px;
+}
+
+a {
+	color: green;
+}
+
+.kader h1 {
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	font-weight: 700;
+	margin-bottom: 5px;
+
+}
+
+.kader p {
+	padding-top: 10px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 15px;
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+.kader .header p {
+
+	color: mediumvioletred;
+}
+
+table {
+  border: 1px solid deeppink;
+  text-align: center;
+  width: 720px;
+  margin-left: 35px;
+  margin-bottom: 10px;
+}
+
+th {
+	border: 1px solid deeppink;
+	padding: 5px;
+	background: palevioletred;
+	color: white;
+}
+
+td {
+	border: 1px solid deeppink;
+	padding: 5px;
+	width: 100px;
+
+}
+
+td:nth-child(2) {
+	width: 320px;
+}
+
+td:nth-child(4) {
+	width: 120px;
+}
+
+tr:nth-child(even) {
+	background: lightpink;
+}

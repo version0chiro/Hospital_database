@@ -1,0 +1,72 @@
+<%- include("partials/header") -%>
+<link rel="stylesheet" href="/css/dataStyles.css">
+  <div>
+    <div class="kader ">
+  <div class="header">
+    <p>Hospital Name here:
+	</div>
+	<h1>Active Paitent Report</h1>
+
+  <table class="table container" >
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Height</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Disease</th>
+        <th scope="col">Review</th>
+        <th scope="col">Blood Pressure</th>
+        <th scope="col">More Info</th>
+      </tr>
+    </thead>
+
+  <tbody>
+    <% var test = length; %>
+    <% paitents.forEach(function(i){ %>
+    <tr>
+      <th scope="row"><%=i.paitentID %></th>
+      <td><%=(i.name)%></td>
+      <td><%=(i.age)%></td>
+      <td><%=(i.height)%></td>
+      <td><%=(i.weight)%></td>
+      <td><%=(i.diesease)%></td>
+      <td><%=(i.review)%></td>
+      <td id="<%=i.paitentID %>" style="text-align: -webkit-center"><%=(i.bloodPressureCount.slice(-1)[0])%></td>
+      <td ><a href="/data/<%=(i.name)%>">Click here for more info</a></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+<div >
+  <a href="/login"><button type="button" class="btn" name="button">To Log Out Click here</button></a>
+    <a href="/dataEntry"><button type="button" class="btn" name="button">To Enter New Data Click here</button></a>
+</div>
+<p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Ut ullamcorper sed metus id semper. Morbi lorem neque, vestibulum at ipsum sit amet, consectetur condimentum augue. Sed interdum lorem quis velit iaculis, ut maximus justo posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas in elit blandit tellus maximus consequat. Aliquam <a href="#">vestibulum</a> feugiat enim ac gravida. Ut aliquam libero justo, et eleifend mauris rhoncus eget. Praesent porta nunc lacus, dapibus mollis dui dapibus eu. Suspendisse euismod sem risus, a vestibulum mauris accumsan ut. Ut hendrerit condimentum ligula, consequat fermentum lectus hendrerit vel. Ut libero sapien, dictum a suscipit quis, placerat sit amet sem.</p>
+  <p>Curabitur at tellus ac nisi viverra aliquam. Aliquam nec lectus luctus risus laoreet ullamcorper. Donec elit lacus, luctus vel justo sed, <a href="#">tincidunt</a> laoreet ipsum. In sed tincidunt est. Nunc placerat sapien placerat iaculis lacinia. Fusce suscipit purus sit amet condimentum accumsan. Donec vel vestibulum ex. Sed a ante et augue porta vestibulum. Vivamus viverra maximus magna, nec porttitor dolor. Aliquam id ex sed dui auctor aliquam. Aliquam erat volutpat. Suspendisse id convallis enim, nec malesuada urna. Donec in placerat neque. Sed ipsum nisi, imperdiet id lectus sed, varius aliquam elit. Nullam vestibulum metus sodales felis tincidunt tincidunt.</p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+var getTest = <%= test  %>;
+console.log("this is "+ getTest );
+
+// $(document).ready(function(){
+//   setInterval(function(){
+//         $("#bloodPressure").load(window.location.href + "#bloodPressure" );
+//   }, 1000);
+// });
+
+ $(document).ready(function(){
+   console.log("ready");
+setInterval(function(){
+    for(var i=1;i<=getTest;i++){
+    $("#"+i).load(window.location.href + " #"+i );
+}
+
+}, 1000);
+
+});
+</script>
+<%- include("partials/footer") -%>

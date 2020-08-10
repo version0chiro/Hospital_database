@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="login">
+	<h1>Register</h1>
+  <!-- Makes POST request to /login route -->
+  <form action="/register" method="POST">
+      <input placeholder="email" autocomplete="off" type="email" class="form-control" name="username">
+      <input placeholder="password" type="password" class="form-control" name="password">
+      <p >Already have an account? <a href="/login">Login Here</a></p>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Register</button>
+  </form>
+</div>
+
+
+
+
+
+<%- include("partials/footer") -%>

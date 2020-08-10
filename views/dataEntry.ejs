@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+<!-- <h1>This page will be used to enter data about the paitents.</h1> -->
+<form class="form-signin" action="/dataEntry" method="post">
+      <img class="mb-4" src="https://cdn1.iconfinder.com/data/icons/warnings-and-dangers/400/Warning-10-512.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please Enter Details of the paitent.</h1>
+      <input name="ID" type="number" id="ID" class="form-control top" placeholder="Enter ID of the paitent" required autofocus>
+      <input name="name1" type="text" id="name" class="form-control mid" placeholder="Full Name of the paitent" required >
+      <input name="age" type="number" id="age" class="form-control mid" placeholder="Enter Age of the paitent" required >
+      <input name="height" type="number" id="height" class="form-control mid" placeholder="Enter Height" required >
+      <input name="weight" type="number" id="weight" class="form-control mid" placeholder="Enter Weight" required >
+      <input name="disease" type="text" id="disease" class="form-control mid" placeholder="Enter disease diagnosis" required >
+      <input name="review" type="text" id="review" class="form-control bottom" placeholder="Doctor's Report" required >
+      <button class="btn btn-lg btn-primary btn-block" type="submit" name="button">Enter in the database</button>
+      <p class="mt-5 mb-3 text-muted">Sachin Singh @2020</p>
+    </form>
+<%- include("partials/footer") -%>
